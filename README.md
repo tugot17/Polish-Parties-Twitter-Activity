@@ -66,8 +66,21 @@ At the top of each notebook we provide a more detail descripion about what the v
 
 ## How to download your own data
 
+To download data use `generate_csv_with_tweets_posted_by_a_user` function from [scripts/twitter_scrapper](twitter_scrapper)
 
+```python
+def generate_csv_with_tweets_posted_by_a_user(user_name, since, save_dir=""):
+    c = twint.Config()
+    c.Username = user_name
+    c.Since = since
+    c.Store_csv = True
+    c.Output = f"{join(save_dir, user_name)}.csv"
 
+    c.Retweet = True
+    twint.run.Profile(c)
+```
+
+And to show visualisations, preprocess downloaded `.csv` using all functions from [processed_data_generator](processed_data_generator). 
 
 ## Authors
 * [Piotr Mazurek](https://github.com/tugot17)
