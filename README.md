@@ -1,5 +1,31 @@
 # Polish-Parties-Twitter-Activity
-Visualisation of the activity of polish parties on twitter
+Visualisations of the activity of polish parties on twitter. 
+
+<img src="images/example-visualisation.png" height=450px/>
+
+
+## How run the visualisations
+
+Just run `jupyter notebook` and open one of the follwing notebooks:
+
+- [Distribution-of-activity](notebooks/Distribution-of-activity.ipynb)
+- [Number-of-tweets-and-retweets-in-time](notebooks/Number-of-tweets-and-retweets-in-time.ipynb)
+- [Popularity-of-tweets-in-time](notebooks/)
+
+At the top of each notebook we provide a more detail descripion about what the visualisation actually shows.
+
+### Data
+
+We provide a set of processed data polish parties such as: 
+
+```python
+[pisorgpl, Porozumienie__, SolidarnaPL], 
+[platforma_org, Nowoczesna, Zieloni, inicjatywaPL], 
+[KONFEDERACJA_, RuchNarodowy, Partia_KORWiN], 
+[nowePSL, KUKIZ15],
+[__Lewica, partiarazem]
+```
+
 
 ## How to configure the enviroment
 
@@ -54,15 +80,6 @@ conda install -c plotly plotly=4.11.0
 conda install -c conda-forge notebook
 ```
 
-## How run the visualisations
-
-Just run `jupyter notebook` and open one of the follwing notebooks:
-
-- [Distribution-of-activity](notebooks/Distribution-of-activity.ipynb)
-- [Number-of-tweets-and-retweets-in-time](notebooks/Number-of-tweets-and-retweets-in-time.ipynb)
-- [Popularity-of-tweets-in-time](notebooks/)
-
-At the top of each notebook we provide a more detail descripion about what the visualisation actually shows.
 
 ## How to download your own data
 
