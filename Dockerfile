@@ -13,8 +13,8 @@ RUN $CONDA_DIR/envs/${conda_env}/bin/python -m ipykernel install --user --name=$
 
 ENV PATH $CONDA_DIR/envs/${conda_env}/bin:$PATH
 
-COPY requirements.txt .
-RUN pip install -r requirements.txt
+RUN pip install tqdm more-itertools==8.0.2
+RUN conda install -c plotly plotly=4.11.0
 
 RUN git clone --depth=1 https://github.com/himanshudabas/twint.git && \
     cd twint && \
