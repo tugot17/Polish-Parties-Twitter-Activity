@@ -25,9 +25,7 @@ def generate_csv_with_tweets_mentioning_user(user_name, since, save_dir=""):
 
 if __name__ == '__main__':
     since = "2020-10-01"
-    # for coalition in tqdm(coalitions.values()):
-    #     for party_name in coalition:
-    #         #generate_csv_with_tweets_posted_by_a_user(party_name, since, save_dir=f"data")
-    party_name = "__Lewica"
+    for coalition in tqdm(coalitions.values()):
+        for party_name in coalition:
+            generate_csv_with_tweets_posted_by_a_user(party_name, since, save_dir=f"data")
 
-    generate_csv_with_tweets_mentioning_user(party_name, since, save_dir=f"about_user_data")
